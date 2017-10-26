@@ -20,6 +20,17 @@ app.use(
     })
 );
 
+app.get('/cat', (req, res) => {
+  res.json({
+     imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
+     name: "Fluffy",
+     gender: 'Female',
+     age: "2 yrs",
+     breed: "Bengal",
+     story: "Thrown on the street"
+   });
+})
+
 function runServer(port = PORT) {
     const server = app
         .listen(port, () => {
