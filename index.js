@@ -31,6 +31,17 @@ app.get('/cat', (req, res) => {
    });
 })
 
+app.get('/dog', (req, res) => {
+  res.json({
+     imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
+     name: "Spot",
+     gender: 'Male',
+     age: "3 yrs",
+     breed: "Soft Coated Wheaten Terrier",
+     story: "Found in carboard box"
+   });
+})
+
 function runServer(port = PORT) {
     const server = app
         .listen(port, () => {
@@ -43,7 +54,7 @@ function runServer(port = PORT) {
 }
 
 if (require.main === module) {
-    dbConnect();
+    // dbConnect();
     runServer();
 }
 
