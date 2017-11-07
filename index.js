@@ -12,7 +12,7 @@ let cats = new Queue();
 let dogs = new Queue();
 
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 100; i++) {
   cats.enqueue({
      imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
      name: "Fluffy " + i,
